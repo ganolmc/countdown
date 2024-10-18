@@ -1,1 +1,5 @@
-<p>Seconds left to deadline: {{ secondsLeft$ | async }}</p>
+<p *ngIf="secondsLeft$ | async as secondsLeft; else loading">
+  Seconds left to deadline: {{ secondsLeft }}
+</p>
+
+<ng-template #loading><p>Loading...</p> </ng-template>

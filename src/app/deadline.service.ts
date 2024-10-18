@@ -12,7 +12,7 @@ export class DeadlineService {
   getDeadline(): Observable<Deadline> {
     // return this.http.get<Countdown>('/api/deadline');
     // Simulating an HTTP request delay of 2 seconds and returning a mock response
-    const mockResponse = { secondsLeft: 120 };
+    const mockResponse = { secondsLeft: 20 };
     return of(mockResponse).pipe(delay(2000));
   }
 }
